@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     startActivity(intent)
                 }
 
-                R.id.btn_move_activity -> run {
+                R.id.btn_move_with_data -> run {
                 }
             }
         }

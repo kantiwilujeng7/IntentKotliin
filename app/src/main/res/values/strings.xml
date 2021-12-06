@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Intent Kotliin</string>
-    <string name="app_name">Intent Kotlin</string>
     <string name="move_activity">PINDAH AKTIVITI</string>
     <string name="move_with_data">PINDAH AKTIVITI DENGAN DATA</string>
     <string name="dial_number">PANGGIL TELEPON</string>
