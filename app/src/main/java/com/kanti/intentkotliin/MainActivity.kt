@@ -1,6 +1,7 @@
 package com.kanti.intentkotliin
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -9,6 +10,7 @@ import android.widget.Button
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var btnMoveActivity: Button
     private lateinit var btnMoveWithData: Button
+    private lateinit var btnDialNumber: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +21,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         btnMoveWithData = findViewById(R.id.btn_move_with_data)
         btnMoveWithData.setOnClickListener(this)
+
+        btnDialNumber = findViewById(R.id.btn_dial_number)
+        btnDialNumber.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -35,6 +40,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     bundle.putString("Nama", "Kanti")
                     bundle.putString("Asal", "Malang")
                     intent.putExtras(bundle)
+                    startActivity(intent)
+                }
+
+                R.id.btn_dial_number -> run {
+                    var dialNumber = "085647588384"
+                    val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + dialNumber))
                     startActivity(intent)
                 }
             }
