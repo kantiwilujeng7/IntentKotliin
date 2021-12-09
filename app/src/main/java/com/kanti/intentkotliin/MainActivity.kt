@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnMoveActivity = findViewById(R.id.btn_move_activity)
         btnMoveActivity.setOnClickListener(this)
 
-        btnMoveWithData = findViewById(R.id.btn_move_activity)
+        btnMoveWithData = findViewById(R.id.btn_move_with_data)
         btnMoveWithData.setOnClickListener(this)
     }
 
@@ -30,6 +30,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 }
 
                 R.id.btn_move_with_data -> run {
+                    val intent = Intent(this, MoveWithDataActivity::class.java)
+                    val bundle = Bundle()
+                    bundle.putString("Nama", "Kanti")
+                    bundle.putString("Asal", "Malang")
+                    intent.putExtras(bundle)
+                    startActivity(intent)
                 }
             }
         }

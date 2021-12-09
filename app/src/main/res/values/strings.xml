@@ -12,4 +12,5 @@
     <string name="choose">PILIH</string>
     <string name="data_received">DATA DITERIMA</string>
     <string name="this_ismove_activity">INI PINDAH AKTIVITI</string>
+    <string name="back">KEMBALI KE HALAMAN UTAMA</string>
 </resources>
